@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to My Docker App</title>
+    <style>
+        body {
+            background-color: #f3f4f6; /* bg-gray-100 */
+            font-family: system-ui, sans-serif; /* font-sans */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 1.5rem; /* p-6 */
+            margin: 0;
+            font-style: italic; /* Italic text */
+            font-weight: 600; /* Semi-bold text */
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.8); /* semi-transparent white for glass effect */
+            padding: 2rem; /* p-8 */
+            border-radius: 0.5rem; /* rounded-lg */
+            box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1); /* shadow-lg */
+            max-width: 48rem; /* max-w-3xl */
+            width: 100%;
+            text-align: center;
+            backdrop-filter: blur(10px); /* Glassmorphism effect */
+        }
+        h1 {
+            font-size: 2.25rem; /* text-4xl */
+            font-weight: 600; /* Semi-bold text */
+            color: #2563eb; /* text-blue-600 */
+            margin-bottom: 1.5rem; /* mb-6 */
+        }
+        p, h2, li, code {
+            color: #374151; /* text-gray-700 */
+            margin-bottom: 1.5rem; /* mb-6 */
+        }
+        h2 {
+            font-size: 1.5rem; /* text-2xl */
+            font-weight: 600; /* Semi-bold text */
+            color: #3b82f6; /* text-blue-500 */
+            margin-bottom: 1rem; /* mb-4 */
+        }
+        ul, ol {
+            list-style-position: inside;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 16rem; /* max-w-xs */
+            text-align: left;
+        }
+        li {
+            margin-bottom: 0.5rem; /* mb-2 */
+        }
+        a {
+            color: #2563eb; /* text-blue-600 */
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline; /* hover:underline */
+        }
+        .button {
+            display: inline-block;
+            background-color: #2563eb; /* bg-blue-600 */
+            color: #ffffff; /* text-white */
+            padding: 0.75rem 1.5rem; /* px-6 py-3 */
+            border-radius: 0.5rem; /* rounded-lg */
+            font-weight: 600; /* Semi-bold text */
+            text-decoration: none;
+        }
+        .button:hover {
+            background-color: #1d4ed8; /* hover:bg-blue-700 */
+        }
+        .commands-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+        }
+        .commands-table th, .commands-table td {
+            border: 1px solid #e5e7eb; /* border color */
+            padding: 0.75rem;
+            text-align: left;
+        }
+        .commands-table th {
+            background-color: #f3f4f6; /* header background */
+            font-weight: 600; /* Semi-bold text */
+        }
+        .commands-table caption {
+            font-size: 1.25rem; /* caption font size */
+            font-weight: 600; /* Semi-bold text */
+            margin-bottom: 1rem;
+        }
+        @media (max-width: 768px) {
+            .commands-table {
+                font-size: 0.875rem; /* smaller font size */
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Container -->
+    <div class="container">
+        <h1>Welcome to My Docker App!</h1>
+       
+        <p>Thank you for visiting our application. This page is hosted within a Docker container, showcasing the power of containerized environments for easy deployment and scalability.</p>
+
+
+        <!-- Features Section -->
+        <div>
+            <h2>Features</h2>
+            <ul>
+                <li>🚀 Quick and easy setup using Docker</li>
+                <li>🔒 Secure and isolated environment</li>
+                <li>📦 Consistent environment across different stages</li>
+                <li>⚙️ Scalable and maintainable architecture</li>
+            </ul>
+        </div>
+
+
+        <!-- Docker Commands Section -->
+        <div>
+            <h2>Docker Commands</h2>
+            <table class="commands-table">
+                <caption>Common Docker Commands</caption>
+                <thead>
+                    <tr>
+                        <th>Command</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>docker run</code></td>
+                        <td>Run a new container from an image</td>
+                    </tr>
+                    <tr>
+                        <td><code>docker build</code></td>
+                        <td>Build an image from a Dockerfile</td>
+                    </tr>
+                    <tr>
+                        <td><code>docker ps</code></td>
+                        <td>List running containers</td>
+                    </tr>
+                    <tr>
+                        <td><code>docker stop</code></td>
+                        <td>Stop a running container</td>
+                    </tr>
+                    <tr>
+                        <td><code>docker rm</code></td>
+                        <td>Remove a stopped container</td>
+                    </tr>
+                    <tr>
+                        <td><code>docker rmi</code></td>
+                        <td>Remove an image</td>
+                    </tr>
+                    <tr>
+                        <td><code>docker logs</code></td>
+                        <td>Fetch logs from a container</td>
+                    </tr>
+                    <tr>
+                        <td><code>docker-compose up</code></td>
+                        <td>Start services defined in a <code>docker-compose.yml</code> file</td>
+                    </tr>
+                    <tr>
+                        <td><code>docker-compose down</code></td>
+                        <td>Stop and remove services, networks, and volumes</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+        <!-- Getting Started Section -->
+        <div>
+            <h2>Getting Started</h2>
+            <p>To get started with our Dockerized application, follow these simple steps:</p>
+            <ol>
+                <li>Clone the repository from <a href="#">GitHub</a>.</li>
+                <li>Build the Docker image using <code>docker build -t my-docker-app .</code>.</li>
+                <li>Run the Docker container using <code>docker run -d -p 8080:80 my-docker-app</code>.</li>
+                <li>Access the application at <code>http://localhost:8080</code>.</li>
+            </ol>
+        </div>
+
+
+        <!-- Call to Action -->
+        <a href="#" class="button">Learn More</a>
+    </div>
+</body>
+</html>
